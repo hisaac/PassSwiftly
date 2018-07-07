@@ -3,13 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4A1E079C20EFAC1600FB0411 /* PassSwiftly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1E079220EFAC1600FB0411 /* PassSwiftly.framework */; };
 		4A1E07A120EFAC1600FB0411 /* PassSwiftlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1E07A020EFAC1600FB0411 /* PassSwiftlyTests.swift */; };
 		4A1E07A320EFAC1600FB0411 /* PassSwiftly.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A1E079520EFAC1600FB0411 /* PassSwiftly.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A1E07AD20EFACE500FB0411 /* Pass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1E07AC20EFACE500FB0411 /* Pass.swift */; };
+		4AB10B7A20F13B1D003A15FA /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB10B7920F13B1D003A15FA /* Beacon.swift */; };
+		4AB10B7C20F13B22003A15FA /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB10B7B20F13B22003A15FA /* Location.swift */; };
+		4AB10B7E20F13B33003A15FA /* Barcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB10B7D20F13B33003A15FA /* Barcode.swift */; };
+		4AB10B8020F13B38003A15FA /* NFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB10B7F20F13B38003A15FA /* NFC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		4A1E079B20EFAC1600FB0411 /* PassSwiftlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PassSwiftlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A1E07A020EFAC1600FB0411 /* PassSwiftlyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassSwiftlyTests.swift; sourceTree = "<group>"; };
 		4A1E07A220EFAC1600FB0411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A1E07AC20EFACE500FB0411 /* Pass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pass.swift; sourceTree = "<group>"; };
+		4AB10B7920F13B1D003A15FA /* Beacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
+		4AB10B7B20F13B22003A15FA /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		4AB10B7D20F13B33003A15FA /* Barcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barcode.swift; sourceTree = "<group>"; };
+		4AB10B7F20F13B38003A15FA /* NFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +83,11 @@
 			children = (
 				4A1E079520EFAC1600FB0411 /* PassSwiftly.h */,
 				4A1E079620EFAC1600FB0411 /* Info.plist */,
+				4A1E07AC20EFACE500FB0411 /* Pass.swift */,
+				4AB10B7920F13B1D003A15FA /* Beacon.swift */,
+				4AB10B7B20F13B22003A15FA /* Location.swift */,
+				4AB10B7D20F13B33003A15FA /* Barcode.swift */,
+				4AB10B7F20F13B38003A15FA /* NFC.swift */,
 			);
 			path = PassSwiftly;
 			sourceTree = "<group>";
@@ -142,12 +157,14 @@
 		4A1E078920EFAC1600FB0411 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = PS;
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Levelsoft;
 				TargetAttributes = {
 					4A1E079120EFAC1600FB0411 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					4A1E079A20EFAC1600FB0411 = {
 						CreatedOnToolsVersion = 10.0;
@@ -155,7 +172,7 @@
 				};
 			};
 			buildConfigurationList = 4A1E078C20EFAC1600FB0411 /* Build configuration list for PBXProject "PassSwiftly" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -194,6 +211,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AB10B7E20F13B33003A15FA /* Barcode.swift in Sources */,
+				4A1E07AD20EFACE500FB0411 /* Pass.swift in Sources */,
+				4AB10B8020F13B38003A15FA /* NFC.swift in Sources */,
+				4AB10B7C20F13B22003A15FA /* Location.swift in Sources */,
+				4AB10B7A20F13B1D003A15FA /* Beacon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +362,7 @@
 		4A1E07A720EFAC1600FB0411 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -351,14 +374,11 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = PassSwiftly/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = software.level.PassSwiftly;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -366,6 +386,7 @@
 		4A1E07A820EFAC1600FB0411 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -377,11 +398,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = PassSwiftly/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = software.level.PassSwiftly;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -392,15 +409,12 @@
 		4A1E07AA20EFAC1600FB0411 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = F2J52QJQ9Y;
 				INFOPLIST_FILE = PassSwiftlyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = software.level.PassSwiftlyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -410,15 +424,12 @@
 		4A1E07AB20EFAC1600FB0411 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = F2J52QJQ9Y;
 				INFOPLIST_FILE = PassSwiftlyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = software.level.PassSwiftlyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

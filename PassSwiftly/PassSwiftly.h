@@ -9,5 +9,3 @@ FOUNDATION_EXPORT double PassSwiftlyVersionNumber;
 FOUNDATION_EXPORT const unsigned char PassSwiftlyVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <PassSwiftly/PublicHeader.h>
-
-
